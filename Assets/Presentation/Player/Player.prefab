@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 82844796468294044}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1726066845840570
 GameObject:
   m_ObjectHideFlags: 1
@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 20570953960787548}
   - component: {fileID: 81827887863972256}
   - component: {fileID: 124208416622308488}
+  - component: {fileID: 114355743748400590}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -135,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1877561043550722
 GameObject:
   m_ObjectHideFlags: 1
@@ -154,7 +155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1945222041906070
 GameObject:
   m_ObjectHideFlags: 1
@@ -179,7 +180,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1123328192415226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.07, z: 0}
+  m_LocalPosition: {x: 284.31616, y: 142.98, z: -129.03967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4933899932741822}
@@ -409,6 +410,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71398ce7fbc3a5b4fa50b50bd54317a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114355743748400590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736270287149832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689a69a166f1ffb44b516f5f90d602cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toneMapping: 0
+  colorMaterial: {fileID: 2100000, guid: dd017b695d35f3d40ad296054c5aa9fb, type: 2}
+  shader: {fileID: 4800000, guid: 882e54c96926fba41a8f998a4d293b44, type: 3}
+  Exposure: 0.406
+  Contrast: 1.289
+  Saturation: 0
+  Gamma: 0.361
+  vignetteIntensity: 0.116
+  R: 0
+  G: 0
+  B: 0
 --- !u!114 &114417239040210050
 MonoBehaviour:
   m_ObjectHideFlags: 1

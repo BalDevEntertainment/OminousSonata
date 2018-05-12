@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -64,7 +64,7 @@ LightmapSettings:
     m_CompAOExponent: 0.3
     m_CompAOExponentDirect: 1
     m_Padding: 2
-    m_LightmapParameters: {fileID: 1310652677}
+    m_LightmapParameters: {fileID: 653054848}
     m_LightmapsBakeMode: 0
     m_TextureCompression: 1
     m_FinalGather: 0
@@ -314,6 +314,71 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1113 &653054848
+LightmapParameters:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Lighting Box Very-Low
+  serializedVersion: 3
+  resolution: 0.125
+  clusterResolution: 0.4
+  irradianceBudget: 96
+  irradianceQuality: 8192
+  backFaceTolerance: 0.7
+  isTransparent: 0
+  modellingTolerance: 0.001
+  systemTag: -1
+  edgeStitching: 1
+  blurRadius: 2
+  directLightQuality: 64
+  antiAliasingSamples: 8
+  bakedLightmapTag: -1
+  pushoff: 0.0001
+  AOQuality: 256
+  AOAntiAliasingSamples: 16
+--- !u!1001 &672458429
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4922024639408322, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -113.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922024639408322, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 78.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922024639408322, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 70.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922024639408322, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922024639408322, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922024639408322, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922024639408322, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922024639408322, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &723067625
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,7 +661,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 723067625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.04, y: 2.86, z: 7.35}
+  m_LocalPosition: {x: -32.6, y: 0.82, z: -6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1827233523}
@@ -759,29 +824,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 943419120}
---- !u!1113 &1310652677
-LightmapParameters:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Lighting Box Very-Low
-  serializedVersion: 3
-  resolution: 0.125
-  clusterResolution: 0.4
-  irradianceBudget: 96
-  irradianceQuality: 8192
-  backFaceTolerance: 0.7
-  isTransparent: 0
-  modellingTolerance: 0.001
-  systemTag: -1
-  edgeStitching: 1
-  blurRadius: 2
-  directLightQuality: 64
-  antiAliasingSamples: 8
-  bakedLightmapTag: -1
-  pushoff: 0.0001
-  AOQuality: 256
-  AOAntiAliasingSamples: 16
 --- !u!1 &1381138016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,10 +1098,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1827233523}
   - component: {fileID: 1827233528}
-  - component: {fileID: 1827233527}
   - component: {fileID: 1827233526}
+  - component: {fileID: 1827233527}
   - component: {fileID: 1827233525}
   - component: {fileID: 1827233524}
+  - component: {fileID: 1827233529}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -1160,6 +1203,28 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1827233529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1827233522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689a69a166f1ffb44b516f5f90d602cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toneMapping: 0
+  colorMaterial: {fileID: 2100000, guid: dd017b695d35f3d40ad296054c5aa9fb, type: 2}
+  shader: {fileID: 4800000, guid: 882e54c96926fba41a8f998a4d293b44, type: 3}
+  Exposure: 0.406
+  Contrast: 1.289
+  Saturation: 0
+  Gamma: 0.361
+  vignetteIntensity: 0.116
+  R: 0
+  G: 0
+  B: 0
 --- !u!1 &1860513412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,49 +1395,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1860513412}
---- !u!1001 &1869446504
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4609287948152300, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609287948152300, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609287948152300, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609287948152300, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609287948152300, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609287948152300, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609287948152300, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609287948152300, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 64186481126013634, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: d8a896958805845c2a8518ebb598ef30, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1882939223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,25 +1487,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1882939223}
---- !u!1 &1980448646 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1967437490115308, guid: d8a896958805845c2a8518ebb598ef30,
-    type: 2}
-  m_PrefabInternal: {fileID: 1869446504}
---- !u!64 &1980448647
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1980448646}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300004, guid: 8b2b6fedd01064c29b3edc055bfa6cc4, type: 3}
 --- !u!1 &2123808486
 GameObject:
   m_ObjectHideFlags: 0

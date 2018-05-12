@@ -39,10 +39,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4933899932741822}
   - component: {fileID: 20570953960787548}
-  - component: {fileID: 81827887863972256}
   - component: {fileID: 124208416622308488}
   - component: {fileID: 114910286439030230}
   - component: {fileID: 114381979978012566}
+  - component: {fileID: 81827887863972256}
+  - component: {fileID: 114761193998504928}
+  - component: {fileID: 114858653335907536}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -57,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1123328192415226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.07, z: 0}
+  m_LocalPosition: {x: -32.6, y: 0.82, z: -6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4933899932741822}
@@ -71,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736270287149832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4250710347346706}
@@ -241,6 +243,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd6cb33694c4a1f82ff6e8accebef78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114761193998504928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736270287149832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689a69a166f1ffb44b516f5f90d602cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toneMapping: 0
+  colorMaterial: {fileID: 2100000, guid: dd017b695d35f3d40ad296054c5aa9fb, type: 2}
+  shader: {fileID: 4800000, guid: 882e54c96926fba41a8f998a4d293b44, type: 3}
+  Exposure: 0.406
+  Contrast: 1.289
+  Saturation: 0
+  Gamma: 0.361
+  vignetteIntensity: 0.116
+  R: 0
+  G: 0
+  B: 0
 --- !u!114 &114805517463987758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -364,6 +388,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+--- !u!114 &114858653335907536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736270287149832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e70603ec954c92ad02671cc747a29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114910286439030230
 MonoBehaviour:
   m_ObjectHideFlags: 1

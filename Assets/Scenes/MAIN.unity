@@ -19,7 +19,7 @@ RenderSettings:
   m_FogMode: 2
   m_FogDensity: 0.0713
   m_LinearFogStart: 0
-  m_LinearFogEnd: 0.01
+  m_LinearFogEnd: 0
   m_AmbientSkyColor: {r: 0.7681661, g: 0.8552679, b: 0.9411765, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -64,7 +64,7 @@ LightmapSettings:
     m_CompAOExponent: 0.3
     m_CompAOExponentDirect: 1
     m_Padding: 2
-    m_LightmapParameters: {fileID: 653054848}
+    m_LightmapParameters: {fileID: 839406536}
     m_LightmapsBakeMode: 0
     m_TextureCompression: 1
     m_FinalGather: 0
@@ -314,29 +314,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1113 &653054848
-LightmapParameters:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Lighting Box Very-Low
-  serializedVersion: 3
-  resolution: 0.125
-  clusterResolution: 0.4
-  irradianceBudget: 96
-  irradianceQuality: 8192
-  backFaceTolerance: 0.7
-  isTransparent: 0
-  modellingTolerance: 0.001
-  systemTag: -1
-  edgeStitching: 1
-  blurRadius: 2
-  directLightQuality: 64
-  antiAliasingSamples: 8
-  bakedLightmapTag: -1
-  pushoff: 0.0001
-  AOQuality: 256
-  AOAntiAliasingSamples: 16
 --- !u!1001 &672458429
 Prefab:
   m_ObjectHideFlags: 0
@@ -668,6 +645,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1113 &839406536
+LightmapParameters:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Lighting Box Very-Low
+  serializedVersion: 3
+  resolution: 0.125
+  clusterResolution: 0.4
+  irradianceBudget: 96
+  irradianceQuality: 8192
+  backFaceTolerance: 0.7
+  isTransparent: 0
+  modellingTolerance: 0.001
+  systemTag: -1
+  edgeStitching: 1
+  blurRadius: 2
+  directLightQuality: 64
+  antiAliasingSamples: 8
+  bakedLightmapTag: -1
+  pushoff: 0.0001
+  AOQuality: 256
+  AOAntiAliasingSamples: 16
 --- !u!1 &938333728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,9 +1099,10 @@ GameObject:
   - component: {fileID: 1827233523}
   - component: {fileID: 1827233528}
   - component: {fileID: 1827233526}
-  - component: {fileID: 1827233527}
   - component: {fileID: 1827233525}
   - component: {fileID: 1827233524}
+  - component: {fileID: 1827233527}
+  - component: {fileID: 1827233530}
   - component: {fileID: 1827233529}
   m_Layer: 0
   m_Name: FirstPersonCharacter
@@ -1206,7 +1207,8 @@ Camera:
 --- !u!114 &1827233529
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 114761193998504928, guid: 183d17d55d52ef743be04707db392800,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1827233522}
   m_Enabled: 1
@@ -1225,6 +1227,18 @@ MonoBehaviour:
   R: 0
   G: 0
   B: 0
+--- !u!114 &1827233530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114858653335907536, guid: 183d17d55d52ef743be04707db392800,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1827233522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e70603ec954c92ad02671cc747a29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1860513412
 GameObject:
   m_ObjectHideFlags: 0

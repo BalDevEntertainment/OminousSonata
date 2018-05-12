@@ -2,7 +2,8 @@
 using Domain;
 using Domain.InteractuableEntity;
 using Domain.PlayerEntity;
-using Presentation.Pickups;
+using Presentation;
+using Presentation.Interactuables;
 using UnityEngine;
 
 namespace Infrastructure.PlayerEntity

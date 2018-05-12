@@ -1,5 +1,4 @@
 ﻿using Domain.InteractuableEntity;
-using Infrastructure.PlayerEntity;
 
 namespace Domain.PlayerEntity
 {
@@ -23,9 +22,9 @@ namespace Domain.PlayerEntity
             Inventory.AddItem(itemKey);
         }
 
-        public void OnReceiveDamage(int DamageAmount)
+        public void OnKillPlayer()
         {
-            PlayerStatusController.OnReceiveDamage(DamageAmount);
+            PlayerStatusController.OnKillPlayer();
         }
     }
 }

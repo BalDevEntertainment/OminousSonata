@@ -5,29 +5,23 @@ namespace Presentation.PlayerEntity
 {
     public class StatusComponent : MonoBehaviour, IPlayerStatusController
     {
-        private int _playerHealth = 100;
-        
-        public void OnReceiveDamage(int DamageAmount)
+        private bool IsPlayerAlive  { get; set; }
+
+        private void Start()
         {
-            //No hay vida segun ultima definicion de gameplay
-//            _playerHealth = _playerHealth - DamageAmount;
-//            Debug.Log("Damage");
-//            if (!IsAlive())
-//            {
-//                OnPlayerDead();
-//            }
-            
-            
+            IsPlayerAlive = true;
         }
 
-        private bool IsAlive()
+        public void OnKillPlayer()
         {
-            return _playerHealth > 0;
+            OnPlayerDead();
         }
         
         private void OnPlayerDead()
         {
             Debug.Log("Player muerto");
+            // Deberiamos llamar a quien controla el game para restartear el game o mostrar publicidad
+            IsPlayerAlive = false;
         }
     }
 }

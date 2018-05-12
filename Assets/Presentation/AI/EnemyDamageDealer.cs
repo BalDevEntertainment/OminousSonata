@@ -2,11 +2,16 @@
 using UnityEngine;
 
 public class EnemyDamageDealer : MonoBehaviour {
+    private static string PLAYER_TAG;
+    static EnemyDamageDealer()
+    {
+        PLAYER_TAG = "Player";
+    }
 
     void OnTriggerEnter(Collider other) {    
-        if (other.gameObject.name.Equals("Player"))
+        if (other.gameObject.name.Equals(PLAYER_TAG))
         {
-            RepositoryProvider.Player().GetPlayer().OnReceiveDamage(10);
+            RepositoryProvider.Player().GetPlayer().OnKillPlayer();
         }     
     }
 }

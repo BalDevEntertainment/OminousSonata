@@ -1,10 +1,11 @@
 ﻿using System;
 using Domain;
 using Domain.InteractuableEntity;
+using Domain.PlayerEntity;
 using Presentation.Pickups;
 using UnityEngine;
 
-namespace Presentation.PlayerEntity
+namespace Infrastructure.PlayerEntity
 {
     public class RaycastComponent : MonoBehaviour, IInteractionController
     {

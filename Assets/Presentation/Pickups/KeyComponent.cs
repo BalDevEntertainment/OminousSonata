@@ -1,4 +1,5 @@
-﻿
+﻿using Domain.InteractuableEntity;
+using Infrastructure;
 using UnityEngine;
 
 namespace Presentation.Pickups
@@ -7,7 +8,11 @@ namespace Presentation.Pickups
     {
         public KeyComponent()
         {
-            _action = () => { Debug.Log("Give key to player");};
+            _action = () =>
+            {
+                RepositoryProvider.Player().GetPlayer().PickItem(new ItemKey()); 
+                Debug.Log("Added Key to inventory");
+            };
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using Domain;
-using Domain.InteractuableEntity;
-using Presentation.PlayerEntity;
+﻿using Domain.InteractuableEntity;
+using Domain.PlayerEntity;
+using Infrastructure;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +17,7 @@ namespace Presentation.GUI
 
 		private void Start()
 		{
-			_interactionController = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerContext>().InteractionController;
+			_interactionController = RepositoryProvider.Player().GetPlayer().InteractionController;
 			_interactionController.OnInteractuableChanged += InteractionChanged;
 		}
 

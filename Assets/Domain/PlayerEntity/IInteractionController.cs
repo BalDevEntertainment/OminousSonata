@@ -1,8 +1,7 @@
 ﻿using System;
 using Domain.InteractuableEntity;
-using Presentation.Pickups;
 
-namespace Domain
+namespace Domain.PlayerEntity
 {
     public interface IInteractionController
     {

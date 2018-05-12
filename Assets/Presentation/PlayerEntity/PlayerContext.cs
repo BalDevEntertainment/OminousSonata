@@ -1,5 +1,6 @@
-﻿using Domain;
-using Domain.PlayerEntity;
+﻿using Domain.PlayerEntity;
+using Infrastructure;
+using Infrastructure.PlayerEntity;
 using UnityEngine;
 
 namespace Presentation.PlayerEntity
@@ -7,17 +8,15 @@ namespace Presentation.PlayerEntity
     public class PlayerContext : MonoBehaviour
     {
         private Player _player;
+        private Inventory _inventory;
 
-        public IInteractionController InteractionController { get; private set; }
+        private IInteractionController InteractionController { get; set; }
 
         private void Awake()
         {
             InteractionController = GetComponent<RaycastComponent>();
-        }
-
-        private void Start()
-        {
-            _player = new Player(InteractionController);
+            _inventory = new Inventory();
+            _player = new Player(InteractionController, _inventory, RepositoryProvider.Player());
         }
     }
 }

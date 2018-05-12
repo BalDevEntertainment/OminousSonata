@@ -6,12 +6,14 @@ namespace Presentation.Pickups
 {
     public class KeyComponent : InteractuableComponent
     {
+        [SerializeField] private Sprite _inventoryIcon;
+
         public KeyComponent()
         {
             _action = () =>
             {
-                RepositoryProvider.Player().GetPlayer().PickItem(new ItemKey()); 
-                Debug.Log("Added Key to inventory");
+                RepositoryProvider.Player().GetPlayer().PickItem(new ItemKey(_inventoryIcon));
+                Destroy(gameObject);
             };
         }
     }

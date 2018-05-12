@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222100808937254916}
   - component: {fileID: 114021110786695316}
   - component: {fileID: 114648384604872592}
+  - component: {fileID: 114768831911931608}
   m_Layer: 0
   m_Name: InteractButton
   m_TagString: Untagged
@@ -109,7 +110,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 57365868cca35cf42b2e6819b2b2c826, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -174,6 +175,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114768831911931608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1941711994511480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e072bb013a3f5d049bc06e246c3e478a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _icon: {fileID: 114301772913255304}
 --- !u!222 &222100808937254916
 CanvasRenderer:
   m_ObjectHideFlags: 1

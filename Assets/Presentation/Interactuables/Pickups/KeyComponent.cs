@@ -1,8 +1,9 @@
 ﻿using Domain.InteractuableEntity;
 using Infrastructure;
+using UnityEditor;
 using UnityEngine;
 
-namespace Presentation.Pickups
+namespace Presentation.Interactuables.Pickups
 {
     public class KeyComponent : InteractuableComponent
     {
@@ -12,7 +13,7 @@ namespace Presentation.Pickups
         {
             _action = () =>
             {
-                RepositoryProvider.Player().GetPlayer().PickItem(new ItemKey(_inventoryIcon));
+                RepositoryProvider.Player().GetPlayer().PickItem(new ItemKey(ItemId.YellowDoorKey, _inventoryIcon));
                 Destroy(gameObject);
             };
         }

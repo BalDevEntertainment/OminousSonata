@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using Boo.Lang;
 using Domain.InteractuableEntity;
+using Presentation.Interactuables.Pickups;
 
 namespace Domain.PlayerEntity
 {
@@ -13,6 +15,12 @@ namespace Domain.PlayerEntity
 		{
 			_items.Add(itemKey);
 			OnItemAdded(itemKey);
+		}
+
+		public bool ContainsItem(ItemId id)
+		{
+			var item = _items.ToList().Find(key => key.Id.Equals(id));
+			return item != null;
 		}
 	}
 }

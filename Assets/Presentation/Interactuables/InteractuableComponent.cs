@@ -2,7 +2,7 @@
 using Domain.InteractuableEntity;
 using UnityEngine;
 
-namespace Presentation.Pickups
+namespace Presentation.Interactuables
 {
 	public class InteractuableComponent : MonoBehaviour, IInteractuable
 	{

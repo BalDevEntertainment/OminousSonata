@@ -7,5 +7,6 @@ namespace Domain
     public interface IInteractionController
     {
         event Action<IInteractuable> OnInteractuableChanged;
+        void Interact();
     }
 }

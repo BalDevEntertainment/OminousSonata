@@ -1,4 +1,5 @@
-﻿using Domain.InteractuableEntity;
+﻿using Domain;
+using Domain.InteractuableEntity;
 using Presentation.PlayerEntity;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,20 +8,25 @@ namespace Presentation.GUI
 {
 	public class InteractButtonComponent : MonoBehaviour {
 		[SerializeField] private Image _icon;
-		private PlayerContext _playerContext;
+		private IInteractionController _interactionController;
+
+		public void OnButtonPressed()
+		{
+			_interactionController.Interact();
+		}
 
 		private void Start()
 		{
-			_playerContext = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerContext>();
-			_playerContext.InteractionController.OnInteractuableChanged += InteractionChanged;
+			_interactionController = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerContext>().InteractionController;
+			_interactionController.OnInteractuableChanged += InteractionChanged;
 		}
 
 		private void OnDestroy()
 		{
-			_playerContext.InteractionController.OnInteractuableChanged += InteractionChanged;
+			_interactionController.OnInteractuableChanged -= InteractionChanged;
 		}
 
-		public void InteractionChanged(IInteractuable interactuable)
+		private void InteractionChanged(IInteractuable interactuable)
 		{
 			gameObject.SetActive(interactuable.CanInteract);
 			_icon.sprite = interactuable.Icon;

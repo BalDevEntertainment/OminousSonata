@@ -1,4 +1,5 @@
-﻿using Domain.InteractuableEntity;
+﻿using System;
+using Domain.InteractuableEntity;
 using UnityEngine;
 
 namespace Presentation.Pickups
@@ -7,6 +8,7 @@ namespace Presentation.Pickups
 	{
 		[SerializeField] private Sprite _icon;
 		[SerializeField] private bool _canInteract = true;
+		protected Action _action = () => {};
 
 		public Sprite Icon
 		{
@@ -16,6 +18,11 @@ namespace Presentation.Pickups
 		public bool CanInteract
 		{
 			get { return _canInteract; }
+		}
+
+		public Action Action
+		{
+			get { return _action; }
 		}
 	}
 }

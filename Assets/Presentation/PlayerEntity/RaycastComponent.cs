@@ -9,19 +9,26 @@ namespace Presentation.PlayerEntity
     public class RaycastComponent : MonoBehaviour, IInteractionController
     {
         public event Action<IInteractuable> OnInteractuableChanged = delegate { };
+
         [SerializeField] private int _interactionDistance;
         [SerializeField] private bool _debug;
+
+        public void Interact()
+        {
+            RaycastHit hit;
+            if (IsAbleToInteract(out hit))
+            {
+                GetInteractuable(hit).Action.Invoke();
+            }
+        }
 
         void Update()
         {
             RaycastHit hit;
-
             ShouldDebug();
-
-            if (HasInteractuableChanged(out hit))
+            if (IsAbleToInteract(out hit))
             {
-                OnInteractuableChanged(
-                    hit.collider.gameObject.GetComponent<InteractuableComponent>());
+                OnInteractuableChanged(GetInteractuable(hit));
             }
             else
             {
@@ -29,7 +36,7 @@ namespace Presentation.PlayerEntity
             }
         }
 
-        private bool HasInteractuableChanged(out RaycastHit hit)
+        private bool IsAbleToInteract(out RaycastHit hit)
         {
             return HasRaycastHitSomething(out hit) && HasDetectedObjectSomeCollider(hit) &&
                    IsDetectedObjectInteractuable(hit);
@@ -56,6 +63,11 @@ namespace Presentation.PlayerEntity
         private static bool HasDetectedObjectSomeCollider(RaycastHit hit)
         {
             return hit.collider != null;
+        }
+
+        private static InteractuableComponent GetInteractuable(RaycastHit hit)
+        {
+            return hit.collider.gameObject.GetComponent<InteractuableComponent>();
         }
     }
 }

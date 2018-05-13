@@ -1,11 +1,11 @@
 ﻿using System;
-using Domain.InteractuableEntity;
 
 namespace Domain.PlayerEntity
 {
     public class Enemy
     {
         public event Action OnPlayerWasDeath;
+        public event Action OnPlayerMakeNoiseEvent;
         
         public Enemy(IEnemyRepository enemyRepository)
         {
@@ -17,6 +17,10 @@ namespace Domain.PlayerEntity
             OnPlayerWasDeath.Invoke();
         }
 
+        public void OnPlayerMakeNoise()
+        {
+            OnPlayerMakeNoiseEvent.Invoke();
+        }
     }
    
 }

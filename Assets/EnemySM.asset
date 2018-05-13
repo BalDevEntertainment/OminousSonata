@@ -154,6 +154,23 @@ MonoBehaviour:
   fromNode: {fileID: 114679869612163180}
   mute: 0
   conditions: []
+--- !u!114 &114114518493090914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: Owner
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Player
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &114116941231647090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -462,6 +479,22 @@ MonoBehaviour:
   name: None
   group: Default
   value: 2
+--- !u!114 &114307117724259502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430ec49b4c8407540b4a3b207ebc3881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 120
 --- !u!114 &114317037138201132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -495,6 +528,23 @@ MonoBehaviour:
   name: None
   group: Default
   value: 2
+--- !u!114 &114333535766003244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: Owner
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &114338097069950994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -508,8 +558,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25068
-    y: 24983
+    x: 25070
+    y: 24981
     width: 150
     height: 30
   color: 5
@@ -554,7 +604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25070
+    x: 25071
     y: 25054
     width: 150
     height: 45
@@ -571,6 +621,22 @@ MonoBehaviour:
   - {fileID: 114928994802557888}
   - {fileID: 114368843632748048}
   - {fileID: 114679869612163180}
+--- !u!114 &114359061431510650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bd5068e326d5e4591acceca523563a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: {x: 0, y: 0, z: 0}
 --- !u!114 &114368843632748048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -585,7 +651,7 @@ MonoBehaviour:
   position:
     serializedVersion: 2
     x: 25285
-    y: 25009
+    y: 25008
     width: 150
     height: 30
   color: 5
@@ -646,7 +712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHidden: 0
   isShared: 1
-  name: Player
+  name: NoiseHearObject
   group: Default
   value: {fileID: 0}
   scenePath: 
@@ -681,7 +747,28 @@ MonoBehaviour:
   isOpen: 1
   tag: {fileID: 114261861764774420}
   store: {fileID: 114573623359545976}
-  everyFrame: 0
+  everyFrame: 1
+--- !u!114 &114453724401215130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f74c8966af5bc54abf09dbf595095c9, type: 3}
+  m_Name: GameObject.LineOfSight
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  gameObject: {fileID: 114333535766003244}
+  target: {fileID: 114114518493090914}
+  angle: {fileID: 114307117724259502}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294966783
+  offset: {fileID: 114359061431510650}
+  equals: {fileID: 114773413728991064}
 --- !u!114 &114457758433837580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -764,8 +851,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 24830
-    y: 25060
+    x: 24833
+    y: 25095
     width: 150
     height: 45
   color: 1
@@ -1074,7 +1161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25282
+    x: 25284
     y: 25133
     width: 150
     height: 30
@@ -1210,6 +1297,22 @@ MonoBehaviour:
   name: None
   group: Default
   value: {x: 0, y: 0, z: 0}
+--- !u!114 &114773413728991064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 1
 --- !u!114 &114799249263294994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1223,8 +1326,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 24834
-    y: 24943
+    x: 24841
+    y: 24945
     width: 150
     height: 30
   color: 5
@@ -1413,6 +1516,7 @@ MonoBehaviour:
   mute: 0
   conditions:
   - {fileID: 114756140202215402}
+  - {fileID: 114453724401215130}
 --- !u!114 &114960553864309494
 MonoBehaviour:
   m_ObjectHideFlags: 1

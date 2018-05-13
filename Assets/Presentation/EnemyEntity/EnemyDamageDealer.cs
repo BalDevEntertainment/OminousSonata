@@ -2,6 +2,7 @@
 using UnityEngine;
 
 public class EnemyDamageDealer : MonoBehaviour {
+   
     private static string PLAYER_TAG;
     static EnemyDamageDealer()
     {
@@ -12,6 +13,8 @@ public class EnemyDamageDealer : MonoBehaviour {
         if (other.gameObject.name.Equals(PLAYER_TAG))
         {
             RepositoryProvider.Player().GetPlayer().OnPlayerDeath();
-        }     
+            RepositoryProvider.Enemy().GetEnemy().OnKillPlayer();
+        }
+        
     }
 }

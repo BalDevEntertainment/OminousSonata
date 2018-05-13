@@ -11,7 +11,7 @@ public class EnemyDamageDealer : MonoBehaviour {
     void OnTriggerEnter(Collider other) {    
         if (other.gameObject.name.Equals(PLAYER_TAG))
         {
-            RepositoryProvider.Player().GetPlayer().OnKillPlayer();
+            RepositoryProvider.Player().GetPlayer().OnPlayerDeath();
         }     
     }
 }

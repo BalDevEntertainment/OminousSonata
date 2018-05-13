@@ -1,4 +1,5 @@
-﻿using Domain.InteractuableEntity;
+﻿using System;
+using Domain.InteractuableEntity;
 
 namespace Domain.PlayerEntity
 {
@@ -7,7 +8,7 @@ namespace Domain.PlayerEntity
         public Inventory Inventory { get; private set; }
         public IInteractionController InteractionController { get; private set; }
         public IPlayerStatusController PlayerStatusController { get; private set; }
-       
+        public event Action OnDeath;
         
         public Player(IInteractionController interactionController, Inventory inventory, IPlayerRepository playerRepository, IPlayerStatusController playerStatusController)
         {
@@ -22,9 +23,11 @@ namespace Domain.PlayerEntity
             Inventory.AddItem(itemKey);
         }
 
-        public void OnKillPlayer()
+        public void OnPlayerDeath()
         {
-            PlayerStatusController.OnKillPlayer();
+            OnDeath.Invoke();
         }
+
     }
+   
 }

@@ -3,6 +3,6 @@ namespace Domain
 {
     public interface IPlayerStatusController
     {
-        void OnKillPlayer();
+        void OnDeath();
     }
 }

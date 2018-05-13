@@ -12,7 +12,7 @@ namespace Presentation.PlayerEntity
             IsPlayerAlive = true;
         }
 
-        public void OnKillPlayer()
+        public void OnDeath()
         {
             OnPlayerDead();
         }
@@ -22,6 +22,7 @@ namespace Presentation.PlayerEntity
             Debug.Log("Player muerto");
             // Deberiamos llamar a quien controla el game para restartear el game o mostrar publicidad
             IsPlayerAlive = false;
+            
         }
     }
 }

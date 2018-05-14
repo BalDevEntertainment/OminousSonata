@@ -19,7 +19,7 @@ RenderSettings:
   m_FogMode: 2
   m_FogDensity: 0.0713
   m_LinearFogStart: 0
-  m_LinearFogEnd: 0.01
+  m_LinearFogEnd: 0
   m_AmbientSkyColor: {r: 0.7681661, g: 0.8552679, b: 0.9411765, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -64,7 +64,7 @@ LightmapSettings:
     m_CompAOExponent: 0.3
     m_CompAOExponentDirect: 1
     m_Padding: 2
-    m_LightmapParameters: {fileID: 1348536449}
+    m_LightmapParameters: {fileID: 1638737842}
     m_LightmapsBakeMode: 0
     m_TextureCompression: 1
     m_FinalGather: 0
@@ -848,29 +848,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a80e5f860d87a43a3023dc1b73a432, type: 2}
   m_IsPrefabParent: 0
---- !u!1113 &1348536449
-LightmapParameters:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Lighting Box Very-Low
-  serializedVersion: 3
-  resolution: 0.125
-  clusterResolution: 0.4
-  irradianceBudget: 96
-  irradianceQuality: 8192
-  backFaceTolerance: 0.7
-  isTransparent: 0
-  modellingTolerance: 0.001
-  systemTag: -1
-  edgeStitching: 1
-  blurRadius: 2
-  directLightQuality: 64
-  antiAliasingSamples: 8
-  bakedLightmapTag: -1
-  pushoff: 0.0001
-  AOQuality: 256
-  AOAntiAliasingSamples: 16
 --- !u!1 &1381138016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1159,29 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1519742246}
+--- !u!1113 &1638737842
+LightmapParameters:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Lighting Box Very-Low
+  serializedVersion: 3
+  resolution: 0.125
+  clusterResolution: 0.4
+  irradianceBudget: 96
+  irradianceQuality: 8192
+  backFaceTolerance: 0.7
+  isTransparent: 0
+  modellingTolerance: 0.001
+  systemTag: -1
+  edgeStitching: 1
+  blurRadius: 2
+  directLightQuality: 64
+  antiAliasingSamples: 8
+  bakedLightmapTag: -1
+  pushoff: 0.0001
+  AOQuality: 256
+  AOAntiAliasingSamples: 16
 --- !u!1 &1827233522
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,8 @@ namespace Domain.PlayerEntity
 {
     public class Enemy
     {
-        public event Action OnPlayerWasDeath;
-        public event Action OnPlayerMakeNoiseEvent;
+        public event Action OnPlayerWasDeath = delegate {  };
+        public event Action OnPlayerMakeNoiseEvent = delegate {  };
         
         public Enemy(IEnemyRepository enemyRepository)
         {

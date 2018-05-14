@@ -2,7 +2,5 @@
 {
     public interface IPlayerNoiseController
     {
-        void MakeNoise(int noiseRadius);
-        
     }
 }

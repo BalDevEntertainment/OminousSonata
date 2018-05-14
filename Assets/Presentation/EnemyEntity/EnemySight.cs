@@ -1,42 +1,55 @@
-﻿using Domain.PlayerEntity;
+﻿using Boo.Lang;
+using Domain.PlayerEntity;
 using Infrastructure;
 using UnityEngine;
+
+using ICode;
 
 namespace Presentation.EnemyEntity
 {
     public class EnemySight : MonoBehaviour
     {
-        private Player _player;
-        private GameObject _playerReference;
-        private string PLAYER_TAG = "Player";
+        private readonly string NOISE_LOCATION_VARIABLE_NAME = "NoiseLocation";
+        private ICodeBehaviour _codeBehaviour;
 
         private void Start()
         {
-            _player = RepositoryProvider.Player().GetPlayer();
-            _player.PlayerMakeNoise += HearPlayer;
-            
+            _codeBehaviour = gameObject.transform.parent.gameObject.GetBehaviour();
+
         }
-        
-        void OnTriggerEnter(Collider other) {    
-            if (other.gameObject.name.Equals(PLAYER_TAG))
+
+        void OnTriggerEnter(Collider other)
+        {
+            var soundEmitterComponent = other.gameObject.GetComponent<PlayerSoundEmitterComponent>();
+            if (soundEmitterComponent == null)
             {
-                _playerReference = other.gameObject;
+                soundEmitterComponent = other.gameObject.GetComponentInChildren<PlayerSoundEmitterComponent>();
             }
-        }
-        
-        void OnTriggerExit(Collider other) {    
-            if (other.gameObject.name.Equals(PLAYER_TAG))
+
+            if (soundEmitterComponent != null)
             {
-                _playerReference = null;
+                soundEmitterComponent.OnMakeNoise += Hear;
             }
         }
 
-        private void HearPlayer()
-        {
-            if(_playerReference != null){
-                // ir al player                
+        void OnTriggerExit(Collider other) {
+            var soundEmitterComponent = other.gameObject.GetComponent<PlayerSoundEmitterComponent>();
+            if (soundEmitterComponent == null)
+            {
+                soundEmitterComponent = other.gameObject.GetComponentInChildren<PlayerSoundEmitterComponent>();
+            }
+
+            if (soundEmitterComponent != null)
+            {
+                soundEmitterComponent.OnMakeNoise -= Hear;
             }
         }
+        
+        private void Hear(GameObject hearedObject)
+        {
+            _codeBehaviour.stateMachine.SetVariable(NOISE_LOCATION_VARIABLE_NAME, hearedObject.transform.position);    
+        }
+       
     }
     
 }

@@ -27,6 +27,7 @@ MonoBehaviour:
   variables:
   - {fileID: 114288946125359386}
   - {fileID: 114317037138201132}
+  - {fileID: 114178919080866736}
   nodes:
   - {fileID: 114243861992571856}
   - {fileID: 114799249263294994}
@@ -255,6 +256,22 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &114178919080866736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bd5068e326d5e4591acceca523563a, type: 3}
+  m_Name: New Vector3
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: NoiseLocation
+  group: Default
+  value: {x: 0, y: 0, z: 0}
 --- !u!114 &114196213980898324
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,7 +10,6 @@ namespace Domain.PlayerEntity
         public IPlayerStatusController PlayerStatusController { get; private set; }
         public IPlayerNoiseController PlayeNoiseController { get; private set; }
         public event Action OnDeath;
-        public event Action PlayerMakeNoise;
         
         public Player(IInteractionController interactionController, Inventory inventory, IPlayerRepository playerRepository, IPlayerStatusController playerStatusController, IPlayerNoiseController playerNoiseController)
         {
@@ -30,12 +29,6 @@ namespace Domain.PlayerEntity
         {
             OnDeath.Invoke();
         }
-
-        public void  MakeNoise()
-        {
-            PlayerMakeNoise.Invoke();
-        }
-
     }
    
 }

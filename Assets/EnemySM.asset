@@ -27,12 +27,14 @@ MonoBehaviour:
   variables:
   - {fileID: 114288946125359386}
   - {fileID: 114317037138201132}
-  - {fileID: 114178919080866736}
+  - {fileID: 114515856020279866}
+  - {fileID: 114554465321005394}
   nodes:
   - {fileID: 114243861992571856}
   - {fileID: 114799249263294994}
   - {fileID: 114537135367101282}
   - {fileID: 114358272228409928}
+  - {fileID: 114017648781343736}
 --- !u!114 &114003946680249618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -49,6 +51,34 @@ MonoBehaviour:
   gameObject: {fileID: 114159685640169176}
   stopUpdates: {fileID: 114046180631080432}
   everyFrame: 0
+--- !u!114 &114017648781343736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16a3faa3edd0ae4aa7bb254ef5b7efe, type: 3}
+  m_Name: GoToLastHearLocation
+  m_EditorClassIdentifier: 
+  position:
+    serializedVersion: 2
+    x: 25120
+    y: 25245
+    width: 150
+    height: 45
+  color: 1
+  comment: 
+  time: 0
+  name: GoToLastHearLocation
+  isStartNode: 0
+  parent: {fileID: 11400000}
+  transitions: []
+  variables: []
+  nodes:
+  - {fileID: 114612594719198574}
+  - {fileID: 114612262682721392}
 --- !u!114 &114046180631080432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,6 +121,22 @@ MonoBehaviour:
   transitions: []
   isSequence: 0
   actions: []
+--- !u!114 &114054201045876682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: IsPlayerSeen
+  group: Default
+  value: 0
 --- !u!114 &114076248458569218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,22 +302,6 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
---- !u!114 &114178919080866736
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53bd5068e326d5e4591acceca523563a, type: 3}
-  m_Name: New Vector3
-  m_EditorClassIdentifier: 
-  isHidden: 0
-  isShared: 1
-  name: NoiseLocation
-  group: Default
-  value: {x: 0, y: 0, z: 0}
 --- !u!114 &114196213980898324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,6 +336,21 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &114202450063654822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269ae332195316b459df13f78995041e, type: 3}
+  m_Name: Variable.CompareBool
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  variable: {fileID: 114054201045876682}
+  equals: {fileID: 114265327678911498}
 --- !u!114 &114212284610964946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -431,6 +476,22 @@ MonoBehaviour:
   name: None
   group: Default
   value: Player
+--- !u!114 &114265327678911498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 1
 --- !u!114 &114278543412549804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -464,6 +525,22 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &114291908093291638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 0
 --- !u!114 &114297247594120596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -654,6 +731,23 @@ MonoBehaviour:
   name: None
   group: Default
   value: {x: 0, y: 0, z: 0}
+--- !u!114 &114361306777933350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: Owner
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &114368843632748048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -838,6 +932,22 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &114515856020279866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: New Bool
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: IsPlayerSeen
+  group: Default
+  value: 0
 --- !u!114 &114517987615460098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -919,6 +1029,22 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &114554465321005394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bd5068e326d5e4591acceca523563a, type: 3}
+  m_Name: New Vector3
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: LastHearingNoisePosition
+  group: Default
+  value: {x: 0, y: 0, z: 0}
 --- !u!114 &114555457609773760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -968,6 +1094,22 @@ MonoBehaviour:
   parameter: {fileID: 114650564653929504}
   value: {fileID: 114156795389040878}
   everyFrame: 0
+--- !u!114 &114571523373791376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281e906a097d727428453755e63f185c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: {fileID: 0}
 --- !u!114 &114573623359545976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -982,6 +1124,23 @@ MonoBehaviour:
   isHidden: 0
   isShared: 1
   name: Player
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
+--- !u!114 &114594340206986116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: Owner
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: None
   group: Default
   value: {fileID: 0}
   scenePath: 
@@ -1034,6 +1193,75 @@ MonoBehaviour:
   mute: 0
   conditions:
   - {fileID: 114499987434252478}
+--- !u!114 &114612262682721392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7f47e6ef9b75e439c8ccfb10d6fdf0, type: 3}
+  m_Name: GoToNoise
+  m_EditorClassIdentifier: 
+  position:
+    serializedVersion: 2
+    x: 25267
+    y: 25002
+    width: 150
+    height: 30
+  color: 5
+  comment: 
+  time: 0
+  name: GoToNoise
+  isStartNode: 1
+  parent: {fileID: 114017648781343736}
+  transitions: []
+  isSequence: 0
+  actions:
+  - {fileID: 114761198628615000}
+--- !u!114 &114612594719198574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f86776eed51fec45a8a3bc34430d6bb, type: 3}
+  m_Name: Any State
+  m_EditorClassIdentifier: 
+  position:
+    serializedVersion: 2
+    x: 25000
+    y: 25000
+    width: 150
+    height: 30
+  color: 2
+  comment: 
+  time: 0
+  name: Any State
+  isStartNode: 0
+  parent: {fileID: 114017648781343736}
+  transitions: []
+  isSequence: 0
+  actions: []
+--- !u!114 &114615340995694674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bd5068e326d5e4591acceca523563a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: LastHearingNoisePosition
+  group: Default
+  value: {x: 0, y: 0, z: 0}
 --- !u!114 &114615591150004524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1179,7 +1407,7 @@ MonoBehaviour:
   position:
     serializedVersion: 2
     x: 25284
-    y: 25133
+    y: 25134
     width: 150
     height: 30
   color: 0
@@ -1298,6 +1526,23 @@ MonoBehaviour:
   second: {fileID: 114615591150004524}
   comparer: 4
   value: {fileID: 114993022284206922}
+--- !u!114 &114761198628615000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a1072d3f5a6deb4eb890d8bb4cc35a9, type: 3}
+  m_Name: NavMeshAgent.SetDestination
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  gameObject: {fileID: 114361306777933350}
+  destination: {fileID: 114615340995694674}
+  target: {fileID: 114594340206986116}
+  everyFrame: 0
 --- !u!114 &114768985799069776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1343,8 +1588,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 24841
-    y: 24945
+    x: 24836
+    y: 24974
     width: 150
     height: 30
   color: 5
@@ -1356,6 +1601,7 @@ MonoBehaviour:
   transitions:
   - {fileID: 114457758433837580}
   - {fileID: 114931074637516586}
+  - {fileID: 114955392868522890}
   isSequence: 0
   actions:
   - {fileID: 114453129036635230}
@@ -1443,6 +1689,22 @@ MonoBehaviour:
   name: None
   group: Default
   value: 0
+--- !u!114 &114848689602699500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281e906a097d727428453755e63f185c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: None
+  group: Default
+  value: {fileID: 0}
 --- !u!114 &114853241666111986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1534,6 +1796,22 @@ MonoBehaviour:
   conditions:
   - {fileID: 114756140202215402}
   - {fileID: 114453724401215130}
+--- !u!114 &114955392868522890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c9e419f86a34748948479c8e6d347f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toNode: {fileID: 114537135367101282}
+  fromNode: {fileID: 114799249263294994}
+  mute: 0
+  conditions:
+  - {fileID: 114202450063654822}
 --- !u!114 &114960553864309494
 MonoBehaviour:
   m_ObjectHideFlags: 1

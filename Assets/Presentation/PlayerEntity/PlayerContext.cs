@@ -19,7 +19,7 @@ namespace Presentation.PlayerEntity
         {
             InteractionController = GetComponent<RaycastComponent>();
             PlayerStatusController = GetComponent<StatusComponent>();
-            PlayerNoiseController = GetComponent<PlayerSoundEmitterComponent>();
+            PlayerNoiseController = GetComponent<SoundEmitterComponent>();
             _inventory = new Inventory();
             _player = new Player(InteractionController, _inventory, RepositoryProvider.Player(), PlayerStatusController, PlayerNoiseController);
         }

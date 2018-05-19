@@ -1,15 +1,29 @@
-﻿
-using System;
+﻿using System;
 using Domain.PlayerEntity;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
-public class PlayerSoundEmitterComponent : MonoBehaviour, IPlayerNoiseController
+namespace Presentation.PlayerEntity
 {
-
-	public event Action<GameObject> OnMakeNoise = delegate {  };
-
-	public void MakeNoise()
+	public class SoundEmitterComponent : MonoBehaviour, IPlayerNoiseController
 	{
-		OnMakeNoise.Invoke(gameObject);
+
+		public event Action<GameObject> OnMakeNoise = delegate {  };
+		[SerializeField] private FirstPersonController _firstPersonController;
+
+		private void Start()
+		{
+			_firstPersonController.OnWalkingSound += MakeNoise;
+		}
+
+		private void OnDestroy()
+		{
+			_firstPersonController.OnWalkingSound -= MakeNoise;		
+		}
+
+		private void MakeNoise()
+		{
+			OnMakeNoise.Invoke(gameObject);
+		}
 	}
 }

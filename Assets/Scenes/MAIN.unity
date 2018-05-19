@@ -19,7 +19,7 @@ RenderSettings:
   m_FogMode: 2
   m_FogDensity: 0.0713
   m_LinearFogStart: 0
-  m_LinearFogEnd: 0
+  m_LinearFogEnd: 0.01
   m_AmbientSkyColor: {r: 0.7681661, g: 0.8552679, b: 0.9411765, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -346,6 +346,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4922024639408322, guid: bd51ea390c45ec24483709da1cc31bac, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64392371931315100, guid: bd51ea390c45ec24483709da1cc31bac,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1198,6 +1203,7 @@ GameObject:
   - component: {fileID: 1827233530}
   - component: {fileID: 1827233527}
   - component: {fileID: 1827233529}
+  - component: {fileID: 1827233531}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -1305,7 +1311,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1827233522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 689a69a166f1ffb44b516f5f90d602cf, type: 3}
   m_Name: 
@@ -1333,6 +1339,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e70603ec954c92ad02671cc747a29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1827233531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1827233522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b818a04d4869542840618b74099470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _firstPersonController: {fileID: 723067628}
 --- !u!1 &1860513412
 GameObject:
   m_ObjectHideFlags: 0

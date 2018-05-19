@@ -1,4 +1,5 @@
 ﻿using ICode;
+using ICode.Actions;
 using Presentation.PlayerEntity;
 using UnityEngine;
 
@@ -10,39 +11,47 @@ namespace Presentation.EnemyEntity
         private const string LastHearLocation = "LastHearLocation";
         private ICodeBehaviour _codeBehaviour;
         private Vector3 _lastHearingNoisePosition;
+        private SoundEmitterComponent _currentSoundEmitterComponent = null;
 
         private void Start()
         {
             _codeBehaviour = gameObject.transform.parent.gameObject.GetBehaviour();
         }
 
+        private void OnDestroy()
+        {
+            if (_currentSoundEmitterComponent != null)
+            {
+                _currentSoundEmitterComponent.OnMakeNoise -= Hear;    
+            }
+                    
+        }
+
         void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Collision");
-            var soundEmitterComponent = other.gameObject.GetComponent<SoundEmitterComponent>();
-            if (soundEmitterComponent == null)
+            _currentSoundEmitterComponent = other.gameObject.GetComponent<SoundEmitterComponent>();
+            if (_currentSoundEmitterComponent == null)
             {
-                soundEmitterComponent = other.gameObject.GetComponentInChildren<SoundEmitterComponent>();
+                _currentSoundEmitterComponent = other.gameObject.GetComponentInChildren<SoundEmitterComponent>();
             }
 
-            if (soundEmitterComponent != null)
+            if (_currentSoundEmitterComponent != null)
             {
-                Debug.Log("BIND");
-                soundEmitterComponent.OnMakeNoise += Hear;
+                _currentSoundEmitterComponent.OnMakeNoise += Hear;
             }
         }
 
         void OnTriggerExit(Collider other)
         {
-            var soundEmitterComponent = other.gameObject.GetComponent<SoundEmitterComponent>();
-            if (soundEmitterComponent == null)
+            _currentSoundEmitterComponent = other.gameObject.GetComponent<SoundEmitterComponent>();
+            if (_currentSoundEmitterComponent == null)
             {
-                soundEmitterComponent = other.gameObject.GetComponentInChildren<SoundEmitterComponent>();
+                _currentSoundEmitterComponent = other.gameObject.GetComponentInChildren<SoundEmitterComponent>();
             }
 
-            if (soundEmitterComponent != null)
+            if (_currentSoundEmitterComponent != null)
             {
-                soundEmitterComponent.OnMakeNoise -= Hear;
+                _currentSoundEmitterComponent.OnMakeNoise -= Hear;
                 _codeBehaviour.stateMachine.SetVariable(IsPlayerSeen, false);
                 _codeBehaviour.stateMachine.SetVariable(LastHearLocation, _lastHearingNoisePosition);
             }
@@ -52,7 +61,6 @@ namespace Presentation.EnemyEntity
         {
             _codeBehaviour.stateMachine.SetVariable(IsPlayerSeen, true);
             _lastHearingNoisePosition = hearedObject.transform.position;
-
         }
     }
 }

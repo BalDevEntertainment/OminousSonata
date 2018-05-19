@@ -8,7 +8,7 @@ namespace Presentation.Interactuables.MapInteractuables
 
         private void Start()
         {
-            _animator = GetComponent<Animator>();
+            _animator = transform.parent.GetComponent<Animator>();
         }
 
         public OpenDoorComponent()

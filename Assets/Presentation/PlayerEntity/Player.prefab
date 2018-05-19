@@ -42,9 +42,10 @@ GameObject:
   - component: {fileID: 124208416622308488}
   - component: {fileID: 114910286439030230}
   - component: {fileID: 114381979978012566}
+  - component: {fileID: 114858653335907536}
   - component: {fileID: 81827887863972256}
   - component: {fileID: 114761193998504928}
-  - component: {fileID: 114858653335907536}
+  - component: {fileID: 114356365356022376}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -58,14 +59,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1123328192415226}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.6, y: 0.82, z: -6.01}
+  m_LocalRotation: {x: -0, y: 0.7304494, z: -0, w: 0.68296677}
+  m_LocalPosition: {x: -69.598, y: 1.112, z: 44.836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4933899932741822}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 93.84801, z: 0}
 --- !u!4 &4933899932741822
 Transform:
   m_ObjectHideFlags: 1
@@ -156,7 +157,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 20.004215
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -232,6 +233,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114356365356022376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736270287149832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b818a04d4869542840618b74099470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _firstPersonController: {fileID: 114805517463987758}
 --- !u!114 &114381979978012566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,7 +262,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736270287149832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 689a69a166f1ffb44b516f5f90d602cf, type: 3}
   m_Name: 
@@ -430,7 +443,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.8
-  m_Radius: 0.5
+  m_Radius: 0.32
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
